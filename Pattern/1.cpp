@@ -139,11 +139,22 @@ void print12 (int n){
     }
 }
 
+int num=1;
+void print13 (int n){
+    for(int i=0;i<n;i++){
+       
+        for(int j=0;j<=i;j++){
+            cout << num << " ";
+            num++;
+        }
+        cout << endl;
+    }
+}
 int main(){
     int num;
     cin >> num;
 
-    print12(num);
+    print13(num);
     
     return 0;
 }
