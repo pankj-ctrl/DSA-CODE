@@ -313,6 +313,8 @@ void print21 (int n){
         cout << endl;
     }
 }
+
+
 int main(){
     int num;
     cin >> num;
