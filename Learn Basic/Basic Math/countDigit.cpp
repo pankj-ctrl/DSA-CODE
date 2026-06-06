@@ -12,6 +12,6 @@ int main(){
         count++;
     }
 
-    cout << "Number of digit " << count;
+    cout << "Number of digit " << count << endl;
     return 0;
 }
