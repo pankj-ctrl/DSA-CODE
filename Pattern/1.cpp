@@ -205,11 +205,21 @@ void print17 (int n){
         cout << endl;
     }
 }
+
+void print18 (int n){
+    char alph='E';
+    for(int i=0;i<n;i++){
+        for(char j=(alph-i);j<=alph;j++){
+            cout << j;
+        }
+        cout << endl;
+    }
+}
 int main(){
     int num;
     cin >> num;
 
-    print17(num);
+    print18(num);
     
     return 0;
 }
