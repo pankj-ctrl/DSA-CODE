@@ -161,11 +161,22 @@ void print14 (int n){
         cout << endl;
     }
 }
+
+void print15 (int n){
+    for(int i=0;i<n;i++){
+        char alph ='A';
+        for(int j=n;j>i;j--){
+            cout << alph <<" ";
+            alph++;
+        }
+        cout << endl;
+    }
+}
 int main(){
     int num;
     cin >> num;
 
-    print14(num);
+    print15(num);
     
     return 0;
 }
