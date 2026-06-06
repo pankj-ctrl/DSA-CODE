@@ -238,7 +238,7 @@ void print19 (int n){
         cout << endl;
     }
 
-    inispace=8;
+    inispace=2*n-2;
     for(int i=1;i<=n;i++){
         //star
         for(int j=0;j<i;j++){
@@ -300,11 +300,24 @@ void print20 (int n){
     }
     
 }
+
+void print21 (int n){
+    for(int i=0;i<n;i++){
+        for(int j=0;j<n;j++){
+            if(i==0 || i==n-1 || j==0 || j==n-1){
+                cout << "*";
+            }else{
+                cout << " ";
+            }
+        }
+        cout << endl;
+    }
+}
 int main(){
     int num;
     cin >> num;
 
-    print20(num);
+    print21(num);
     
     return 0;
 }
