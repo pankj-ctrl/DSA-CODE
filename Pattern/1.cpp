@@ -259,11 +259,52 @@ void print19 (int n){
         cout << endl;
     }
 }
+
+void print20 (int n){
+    int inispace = 0;
+     inispace=8;
+    for(int i=1;i<=n;i++){
+        
+        //star
+        for(int j=0;j<i;j++){
+            cout << "*";
+        }
+
+        // space
+        for(int j=0;j<inispace;j++){
+            cout << " ";
+        }
+
+        //star
+        for(int j=0;j<i;j++){
+            cout << "*";
+        }
+        inispace=inispace-2;
+
+        cout << endl;
+    }
+     
+    inispace=2;
+    for(int i=1;i<=n;i++){
+        for(int j=0;j<n-i;j++){
+            cout << "*";
+        }
+        for(int j=0;j<inispace;j++){
+            cout << " ";
+        }
+        for(int j=0;j<n-i;j++){
+            cout << "*";
+        }
+        inispace+=2;
+        cout << endl;
+    }
+    
+}
 int main(){
     int num;
     cin >> num;
 
-    print19(num);
+    print20(num);
     
     return 0;
 }
