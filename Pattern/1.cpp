@@ -215,11 +215,55 @@ void print18 (int n){
         cout << endl;
     }
 }
+
+void print19 (int n){
+    int inispace=0;
+    for(int i=0;i<n;i++){
+        //star
+        for(int j=1;j<=n-i;j++){
+            cout << "*";
+        }
+
+        // space
+        for(int j=0;j<inispace;j++){
+            cout << " ";
+        }
+
+        //star
+        for(int j=1;j<=n-i;j++){
+            cout << "*";
+        }
+        inispace=inispace+2;
+
+        cout << endl;
+    }
+
+    inispace=8;
+    for(int i=1;i<=n;i++){
+        //star
+        for(int j=0;j<i;j++){
+            cout << "*";
+        }
+
+        // space
+        for(int j=0;j<inispace;j++){
+            cout << " ";
+        }
+
+        //star
+        for(int j=0;j<i;j++){
+            cout << "*";
+        }
+        inispace=inispace-2;
+
+        cout << endl;
+    }
+}
 int main(){
     int num;
     cin >> num;
 
-    print18(num);
+    print19(num);
     
     return 0;
 }
