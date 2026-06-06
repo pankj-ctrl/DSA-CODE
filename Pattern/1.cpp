@@ -183,11 +183,33 @@ void print16 (int n){
         cout << endl;
     }
 }
+
+void print17 (int n){
+    for(int i=0;i<n;i++){
+        // space
+        for(int j=0;j<n-i;j++){
+            cout << " ";
+        }
+        // Char
+        char alpha='A';
+        int breakPoint=(2*i+1)/2;
+        for(int k=1;k<=(2*i+1);k++){
+            cout << alpha;
+            if(k<=breakPoint) alpha++;
+            else alpha--;
+        }
+        // space
+        for(int l=0;l<n-i;l++){
+            cout << " ";
+        }
+        cout << endl;
+    }
+}
 int main(){
     int num;
     cin >> num;
 
-    print16(num);
+    print17(num);
     
     return 0;
 }
