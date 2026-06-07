@@ -20,7 +20,8 @@ int main(){
     vector<int> ls;
 
     // Optimized way 
-    for(int i=1; i<=sqrt(num);i++){
+    // you can take i*i<=n; sqrt(num)
+    for(int i=1; i*i<=num;i++){
         if(num%i==0){
         ls.push_back(i);
 
