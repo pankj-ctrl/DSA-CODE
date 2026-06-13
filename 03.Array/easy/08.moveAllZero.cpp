@@ -67,6 +67,26 @@ void bruteForce1(int arr[],int n){
     }
 }
 
+// optimal way
+
+void optimalway(int arr[],int n){
+    int i=-1;
+    for(int j=0;j<n;j++){
+       if(arr[j]==0){
+          i=j;
+          break;
+        }
+    }
+
+    for(int j=i+1;j<n;j++){
+        if(arr[j]!=0){
+            swap(arr[j],arr[i]);
+            i++;
+        }
+    }
+}
+
+
 int main(){
     int n;
     cin>> n;
@@ -77,7 +97,7 @@ int main(){
         cin >> arr[i];
     }
 
-    bruteForce1(arr,n);
+    optimalway(arr,n);
     
 
     for(int i=0;i<n;i++){
