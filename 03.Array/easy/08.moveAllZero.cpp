@@ -78,7 +78,7 @@ void optimalway(int arr[],int n){
         }
     }
    
-    if(j===-1) return;
+    if(i==-1) return;
     for(int j=i+1;j<n;j++){
         if(arr[j]!=0){
             swap(arr[j],arr[i]);
