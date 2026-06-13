@@ -54,7 +54,7 @@ void bruteForce1(int arr[],int n){
     vector <int> temp;
     for(int i=0;i<n;i++){
         if(arr[i]!=0){
-            temp[i]=arr[i];
+            temp.push_back(arr[i]);
         }
     }
 
