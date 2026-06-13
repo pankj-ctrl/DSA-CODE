@@ -50,6 +50,23 @@ void bruteForce(int arr[],int n){
      
 }
 
+void bruteForce1(int arr[],int n){
+    vector <int> temp;
+    for(int i=0;i<n;i++){
+        if(arr[i]!=0){
+            temp[i]=arr[i];
+        }
+    }
+
+    for(int i=0;i<temp.size();i++){
+        arr[i]=temp[i];
+    }
+
+    for(int i = temp.size();i<n;i++){
+        arr[i]=0;
+    }
+}
+
 int main(){
     int n;
     cin>> n;
@@ -60,7 +77,7 @@ int main(){
         cin >> arr[i];
     }
 
-    bruteForce(arr,n);
+    bruteForce1(arr,n);
     
 
     for(int i=0;i<n;i++){
