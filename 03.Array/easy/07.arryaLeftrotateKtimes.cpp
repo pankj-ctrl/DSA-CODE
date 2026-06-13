@@ -18,6 +18,22 @@ void bruteForce(int arr[],int n,int d){
         arr[i]=temp[i-(n-d)];
     }
 }
+
+// optimal way , we are doing array reverse
+/*
+reverse(arr,arr+d)
+reverse(arr+d,arr+n)
+reverse(arr , arr+n)
+ 
+by using this we can rotate this.
+
+*/
+
+void optimalway(int arr[],int n,int d){
+    reverse(arr,arr+d);
+    reverse(arr+d,arr+n);
+    reverse(arr,arr+n);
+}
 int main(){
     int n;
     cin>> n;
@@ -30,6 +46,7 @@ int main(){
     }
 
     // bruteForce(arr,n,d);
+    optimalway(arr,n,d);
 
     for(int i=0;i<n;i++){
         cout << arr[i] << " ";
