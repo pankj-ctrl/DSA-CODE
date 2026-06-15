@@ -27,6 +27,20 @@ void brute(int arr[], int n)
 
 }
 
+void optimal(int arr[],int n){
+    int xor1=0,j=0;
+    int xor2=1;
+    for(int j=0;j<n;j++){
+        xor1 =xor1^arr[j];
+        xor1=xor1^arr[j];
+        if((xor1 ^ xor2) !=0){
+            cout << "Value is : " << arr[j];
+            break;
+        }
+    }
+    
+}
+
 
 
 int main()
@@ -40,5 +54,5 @@ int main()
         cin >> arr[i];
     }
 
-    brute(arr, n);
+    optimal(arr, n);
 }
