@@ -30,16 +30,26 @@ void betterSolu(int arr [],int n){
     }
 }
 
+void optimal1(int arr[],int n){
+    int sum=(n*(n+1))/2;
+    int s2=0;
+    for(int i=0;i<n-1;i++){
+        s2=s2+arr[i];
+    }
+
+    cout << "Missing value is " << sum-s2 << endl;
+}
+
 int main(){
     int n;
     cin >> n;
     int arr[n];
     cout << "Now enter your element : \n";
-    for(int i=0;i<n;i++){
+    for(int i=0;i<n-1;i++){
         cin >> arr[i];
     }
  
-    betterSolu(arr,n);
+    optimal1(arr,n);
 
     return 0;
 }
