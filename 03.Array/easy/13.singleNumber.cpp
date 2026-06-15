@@ -41,6 +41,18 @@ void optimal(int arr[],int n){
     
 }
 
+ void better(int arr[] ,int n){
+      int hash[(n+1)/2]={0};
+      for(int i=0;i<n;i++){
+        hash[arr[i]]++;
+      }
+      for(int i=1;i<=(n+1)/2;i++){
+        if(hash[i]==1){
+            cout << "value is "<< arr[i] << endl;
+        } 
+      }
+ }
+
 
 
 int main()
@@ -54,5 +66,5 @@ int main()
         cin >> arr[i];
     }
 
-    optimal(arr, n);
+    better(arr, n);
 }
