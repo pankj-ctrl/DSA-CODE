@@ -16,6 +16,31 @@ int brute(int arr[],int n){
     }
     return -1;
 }
+
+
+int better(int arr[],int n){
+    int cnt=0,el;
+    for(int i=0;i<n;i++){
+        if(cnt==0){
+            cnt=1;
+            el=arr[i];
+        }else if(arr[i]==el){
+            cnt++;
+        }else{
+            cnt --;
+        }
+    }
+    
+    int temp=0;
+    for(int i=0;i<n;i++){
+        if(arr[i]==el) temp++;
+    }
+    if(temp>n/2){
+        return el;
+    }
+
+    return -1;
+}
 int main(){
     int n;
     cout << "Now Enter the Array size : " << endl;
@@ -25,6 +50,6 @@ int main(){
     for(int i=0;i<n;i++){
         cin >> arr[i];
     }
-    cout << brute(arr,n)<< " is majority element " << endl;
+    cout << better(arr,n)<< " is majority element " << endl;
     return 0;
 }
