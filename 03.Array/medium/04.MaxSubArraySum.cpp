@@ -23,6 +23,6 @@ int main(){
         cin >> arr[i];
      }
 
-     better(arr,n);
+     optimal(arr,n);
     return 0;
 }
