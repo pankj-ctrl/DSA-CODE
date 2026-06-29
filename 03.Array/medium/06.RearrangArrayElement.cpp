@@ -21,6 +21,22 @@ void brute(int arr[],int n){
     }
 }
 
+void optimal(int arr[],int n){
+    int ans[n],postiveIdx=0,negativeIdx=1;
+    for(int i=0;i<n;i++){
+        if(arr[i]>0){
+            ans[postiveIdx]=arr[i];
+            postiveIdx+=2;
+        }else{
+            ans[negativeIdx]=arr[i];
+            negativeIdx+=2;
+        }
+    }
+    for(int i=0;i<n;i++){
+        cout << ans[i] <<" ";
+    }
+}
+
 int main(){
     int n;
     cout << "Enter size of array: ";
@@ -32,11 +48,9 @@ int main(){
         cin >> arr[i];
     }
 
-    brute(arr,n);
+    optimal(arr,n);
 
-    for(int i=0;i<n;i++){
-        cout << arr[i] << " ";
-    }
+   
     cout << endl;
     return 0;
 }
